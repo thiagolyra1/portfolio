@@ -1,0 +1,41 @@
+
+# ── Secrets & Env ──
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ── Dependencies ──
+node_modules/
+
+# ── Build & Logs ──
+dist/
+build/
+*.log
+logs/
+
+# ── OS & IDE ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.swp
+
+# ── AIOX Framework (não faz parte do portfólio) ──
+.aiox-core/
+.aiox/
+.antigravity/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.github/
+AGENTS.md
+squads/
+docs/
+packages/
+bin/
+core-config.yaml
+agents/
+.env.example
