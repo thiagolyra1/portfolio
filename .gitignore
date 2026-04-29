@@ -22,6 +22,9 @@ Thumbs.db
 .vscode/settings.json
 *.swp
 
+# ── Claude Code ──
+CLAUDE.md
+
 # ── AIOX Framework (não faz parte do portfólio) ──
 .aiox-core/
 .aiox/
