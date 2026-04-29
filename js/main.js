@@ -8,9 +8,11 @@ const navbar   = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu   = document.getElementById('navMenu');
 
+let _navTimer;
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
-  highlightActiveNav();
+  clearTimeout(_navTimer);
+  _navTimer = setTimeout(highlightActiveNav, 50);
 }, { passive: true });
 
 // ── Mobile menu ──
@@ -26,6 +28,14 @@ document.querySelectorAll('.nav__link').forEach(link => {
     navMenu.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   });
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+    navToggle.classList.remove('active');
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
 });
 
 // ── Typed text ──
@@ -44,6 +54,7 @@ let deleting = false;
 const typedEl = document.getElementById('typedText');
 
 function tick() {
+  if (!typedEl) return;
   const str  = lines[lineIdx];
   const next = deleting
     ? str.slice(0, charIdx - 1)
