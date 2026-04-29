@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiago Lyra | Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Thiago de Lyra Borges — Desenvolvedor Full Stack especializado em Python, Django, TypeScript, Angular, React e Java." />
+  <meta property="og:title" content="Thiago Lyra | Full Stack Developer" />
+  <meta property="og:description" content="Desenvolvedor Full Stack com experiência em projetos reais para órgãos governamentais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo">TL<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about"      class="nav__link">Sobre</a></li>
+        <li><a href="#skills"     class="nav__link">Habilidades</a></li>
+        <li><a href="#projects"   class="nav__link">Projetos</a></li>
+        <li><a href="#experience" class="nav__link">Experiência</a></li>
+        <li><a href="#education"  class="nav__link">Formação</a></li>
+        <li><a href="#contact"    class="nav__link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+    <div class="hero__container">
+      <div class="hero__content">
+        <p class="hero__greeting">&#47;&#47; olá, eu sou</p>
+        <h1 class="hero__name">Thiago <span>Lyra</span></h1>
+        <div class="hero__title">
+          <span class="hero__prefix">&gt; </span>
+          <span class="hero__typed" id="typedText"></span>
+          <span class="hero__cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero__desc">
+          Desenvolvedor Full Stack com experiência em projetos reais para órgãos governamentais.
+          Especializado em <strong>Python/Django</strong>, <strong>TypeScript/Angular</strong> e
+          <strong>Java/Spring</strong>. Apaixonado por resolver problemas com código limpo e escalável.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+          <a href="#contact"  class="btn btn--ghost">Falar Comigo</a>
+        </div>
+        <div class="hero__social">
+          <a href="https://github.com/thiagolyra1" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://gitlab.com/thiagolyra1" target="_blank" rel="noopener" class="social-icon" aria-label="GitLab">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 014.82 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0118.6 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.51L23 13.45a.84.84 0 01-.35.94z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/thiagolyra" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-card__header">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="code-card__filename">thiago.py</span>
+          </div>
+          <pre class="code-card__body"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.name     = <span class="str">"Thiago Lyra"</span>
+        self.role     = <span class="str">"Full Stack Dev"</span>
+        self.location = <span class="str">"João Pessoa, PB"</span>
+        self.stack = {
+            <span class="str">"backend"</span>:  [<span class="str">"Django"</span>, <span class="str">"DRF"</span>, <span class="str">"Spring"</span>],
+            <span class="str">"frontend"</span>: [<span class="str">"Angular"</span>, <span class="str">"React"</span>],
+            <span class="str">"infra"</span>:    [<span class="str">"Docker"</span>, <span class="str">"Redis"</span>],
+        }
+        self.open_to_work = <span class="bl">True</span></code></pre>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo">
+      <span>scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </a>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; sobre mim</span>
+        <h2 class="section__title">Quem sou eu</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Sou <strong>Desenvolvedor Full Stack</strong> formado em Sistemas para Internet pela UNIPÊ e atualmente
+            cursando pós-graduação em <strong>IA e Machine Learning</strong>. Tenho experiência real em ambientes
+            de produção, desenvolvendo sistemas para órgãos públicos e empresas no ecossistema da Fábrica de Software UNIPÊ.
+          </p>
+          <p>
+            Atuei em projetos como sistemas de <strong>scraping automatizado</strong> para a Prefeitura de João Pessoa,
+            um sistema completo de <strong>gestão de saúde pública</strong> para a ESP-PB (Escola de Saúde Pública da Paraíba)
+            e um <strong>sistema financeiro para o Exército Brasileiro</strong> — todos em produção.
+          </p>
+          <p>
+            Minha especialidade está no ecossistema <strong>Python/Django</strong> para backend,
+            <strong>Angular e React com TypeScript</strong> para frontend, e
+            <strong>Docker + Celery + Redis</strong> para infraestrutura. Inglês avançado e sempre em busca
+            de novos desafios.
+          </p>
+          <div class="stats-row">
+            <div class="stat-box">
+              <span class="stat-num">3+</span>
+              <span class="stat-lbl">Projetos em produção</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">2</span>
+              <span class="stat-lbl">Estágios profissionais</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">10+</span>
+              <span class="stat-lbl">Tecnologias dominadas</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__card reveal">
+          <div class="info-card">
+            <h3>Informações</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">&#128205;</span><span>João Pessoa, PB &mdash; Brasil</span></li>
+              <li><span class="info-icon">&#127891;</span><span>Tecnólogo em Sistemas para Internet &mdash; UNIPÊ</span></li>
+              <li><span class="info-icon">&#129302;</span><span>Pós-grad. IA &amp; Machine Learning (Cursando)</span></li>
+              <li><span class="info-icon">&#127760;</span><span>Português (Nativo) | Inglês (Avançado)</span></li>
+              <li><span class="info-icon">&#128139;</span><span>thiagolyra1@gmail.com</span></li>
+              <li><span class="info-icon">&#128222;</span><span>(83) 98888-1417</span></li>
+            </ul>
+            <a href="mailto:thiagolyra1@gmail.com" class="btn btn--primary btn--sm">Entre em Contato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; habilidades</span>
+        <h2 class="section__title">Stack Tecnológico</h2>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#9889;</span> Linguagens</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--cyan">Python</span>
+            <span class="tag tag--cyan">Java</span>
+            <span class="tag tag--cyan">TypeScript</span>
+            <span class="tag tag--cyan">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#128640;</span> Frameworks</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--purple">Django</span>
+            <span class="tag tag--purple">DRF</span>
+            <span class="tag tag--purple">React</span>
+            <span class="tag tag--purple">Angular</span>
+            <span class="tag tag--purple">Spring</span>
+            <span class="tag tag--purple">Spring MVC</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#128451;</span> Bancos de Dados</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--green">PostgreSQL</span>
+            <span class="tag tag--green">MySQL</span>
+            <span class="tag tag--green">MongoDB</span>
+            <span class="tag tag--green">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#128295;</span> DevOps &amp; Ferramentas</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--orange">Docker</span>
+            <span class="tag tag--orange">Celery</span>
+            <span class="tag tag--orange">Git</span>
+            <span class="tag tag--orange">Selenium</span>
+            <span class="tag tag--orange">Playwright</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#129302;</span> IA &amp; Data Science</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--pink">Machine Learning</span>
+            <span class="tag tag--pink">Visão Computacional</span>
+            <span class="tag tag--pink">PLN</span>
+            <span class="tag tag--pink">RAG</span>
+            <span class="tag tag--pink">IA Generativa</span>
+            <span class="tag tag--pink">Fine Tuning</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title"><span>&#128208;</span> Metodologias</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--indigo">Agile / Scrum</span>
+            <span class="tag tag--indigo">REST API</span>
+            <span class="tag tag--indigo">MVC</span>
+            <span class="tag tag--indigo">Clean Code</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; projetos</span>
+        <h2 class="section__title">Trabalhos em Destaque</h2>
+        <p class="section__subtitle">Sistemas desenvolvidos em ambiente real e acadêmico</p>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Clipping PMPB -->
+        <article class="proj-card reveal">
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#128240;</span>
+            <span class="badge badge--private">GitLab · Privado</span>
+          </div>
+          <h3 class="proj-card__title">Clipping de Notícias &mdash; PMPB</h3>
+          <p class="proj-card__desc">
+            Sistema automatizado de scraping de notícias para a Prefeitura Municipal de João Pessoa.
+            Coleta de múltiplos sites e Instagram com armazenamento em PostgreSQL, interface web Django
+            e agendamento configurável a cada 15 minutos via Celery.
+          </p>
+          <div class="proj-card__tags">
+            <span>Python</span><span>Django</span><span>PostgreSQL</span>
+            <span>Docker</span><span>Celery</span><span>Redis</span><span>Selenium</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#127963; Prefeitura de João Pessoa</span>
+          </div>
+        </article>
+
+        <!-- ESP-PB -->
+        <article class="proj-card proj-card--featured reveal">
+          <span class="proj-card__badge">&#11088; Destaque</span>
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#127973;</span>
+            <span class="badge badge--private">GitLab · Privado</span>
+          </div>
+          <h3 class="proj-card__title">ESP-PB &mdash; Escola de Saúde Pública</h3>
+          <p class="proj-card__desc">
+            Sistema completo de gestão da Rede Escola SUS-PB. Controle de estágios e residências,
+            geração automática de TCE/TRP, múltiplos perfis (IE/NEP/RESUS/Coordenação),
+            dashboards, relatórios PDF/CSV e gestão documental com workflows complexos.
+          </p>
+          <div class="proj-card__tags">
+            <span>Django</span><span>DRF</span><span>TypeScript</span>
+            <span>Docker</span><span>PostgreSQL</span><span>Angular</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#127973; Saúde Pública &mdash; Estado da Paraíba</span>
+          </div>
+        </article>
+
+        <!-- Exército -->
+        <article class="proj-card proj-card--featured reveal">
+          <span class="proj-card__badge">&#11088; Destaque</span>
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#129510;</span>
+            <span class="badge badge--private">GitLab · Privado</span>
+          </div>
+          <h3 class="proj-card__title">Sistema Financeiro &mdash; Exército Brasileiro</h3>
+          <p class="proj-card__desc">
+            Aplicação para a Base Administrativa do Exército Brasileiro (B Adm Gu JP), gerenciando
+            processos financeiros do 15º BIMtz e 16º R C Mec. Padroniza e automatiza o controle
+            financeiro, proporcionando transparência e integração entre as organizações militares.
+          </p>
+          <div class="proj-card__tags">
+            <span>Python</span><span>Django</span><span>PostgreSQL</span>
+            <span>Docker</span><span>Git LFS</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#129510; Defesa Nacional &mdash; Exército Brasileiro</span>
+          </div>
+        </article>
+
+        <!-- Spring MVC -->
+        <article class="proj-card reveal">
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#9749;</span>
+            <a href="https://github.com/thiagolyra1/projetoSpringMVC" target="_blank" rel="noopener" class="proj-link" aria-label="Ver no GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="proj-card__title">Projeto Spring MVC</h3>
+          <p class="proj-card__desc">
+            Aplicação de cadastro de estudantes com operações CRUD completas usando Spring MVC,
+            demonstrando arquitetura MVC em Java com persistência de dados.
+          </p>
+          <div class="proj-card__tags">
+            <span>Java</span><span>Spring MVC</span><span>MySQL</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#11088; 1 star no GitHub</span>
+          </div>
+        </article>
+
+        <!-- ProjetoPratico4Periodo -->
+        <article class="proj-card reveal">
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#127760;</span>
+            <a href="https://github.com/thiagolyra1/ProjetoPratico4Periodo" target="_blank" rel="noopener" class="proj-link" aria-label="Ver no GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="proj-card__title">Projeto Prático &mdash; 4º Período</h3>
+          <p class="proj-card__desc">
+            Aplicação web para a cadeira de Programação com Frameworks Web, utilizando
+            TypeScript e Angular com boas práticas de componentização.
+          </p>
+          <div class="proj-card__tags">
+            <span>TypeScript</span><span>Angular</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#128218; UNIPÊ &mdash; 4º Período</span>
+          </div>
+        </article>
+
+        <!-- wsBackend -->
+        <article class="proj-card reveal">
+          <div class="proj-card__top">
+            <span class="proj-card__icon">&#128296;</span>
+            <a href="https://github.com/thiagolyra1/wsBackend-Fabrica25.1" target="_blank" rel="noopener" class="proj-link" aria-label="Ver no GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="proj-card__title">Workshop Backend &mdash; Fábrica 25.1</h3>
+          <p class="proj-card__desc">
+            API backend desenvolvida no workshop de backend da Fábrica de Software 25.1,
+            aplicando Django REST Framework e boas práticas de desenvolvimento de APIs.
+          </p>
+          <div class="proj-card__tags">
+            <span>Python</span><span>Django</span><span>DRF</span>
+          </div>
+          <div class="proj-card__footer">
+            <span class="proj-card__org">&#127981; Fábrica de Software UNIPÊ</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects__more reveal">
+        <a href="https://github.com/thiagolyra1" target="_blank" rel="noopener" class="btn btn--ghost">
+          Ver mais repositórios no GitHub &#8594;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; experiência</span>
+        <h2 class="section__title">Trajetória Profissional</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Desenvolvedor Full Stack &mdash; Estágio</h3>
+                <div class="tl-company">&#127981; Fábrica de Software UNIPÊ</div>
+              </div>
+              <span class="tl-date">2024 &ndash; Atual</span>
+            </div>
+            <ul class="tl-list">
+              <li>Desenvolvimento de aplicações web com Django e React para clientes governamentais</li>
+              <li>Uso de Docker, Redis e Celery em sistemas distribuídos e de alta disponibilidade</li>
+              <li>Projetos reais entregues: PMPB, ESP-PB (Saúde Pública) e Exército Brasileiro</li>
+              <li>Trabalho colaborativo com Git, metodologias ágeis e code review</li>
+            </ul>
+            <div class="tl-tech">
+              <span>Django</span><span>React</span><span>Docker</span>
+              <span>Redis</span><span>Celery</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Web Designer &mdash; Estágio</h3>
+                <div class="tl-company">&#9878; TRE-PB &mdash; Tribunal Regional Eleitoral da Paraíba</div>
+              </div>
+              <span class="tl-date">2024</span>
+            </div>
+            <ul class="tl-list">
+              <li>Desenvolvimento de site institucional para órgão eleitoral federal</li>
+              <li>Implementação de formulários interativos e geração de QR Code</li>
+              <li>Foco em acessibilidade e conformidade com padrões de governo digital</li>
+            </ul>
+            <div class="tl-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Assistente Administrativo</h3>
+                <div class="tl-company">&#128218; O Sebo Cultural</div>
+              </div>
+              <span class="tl-date">2019 &ndash; 2024</span>
+            </div>
+            <ul class="tl-list">
+              <li>Atendimento ao cliente e suporte a sistemas internos</li>
+              <li>Resolução de problemas operacionais e rotinas administrativas</li>
+              <li>Gestão de processos e melhoria contínua de fluxos de trabalho</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION ==================== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; formação</span>
+        <h2 class="section__title">Educação &amp; Certificações</h2>
+      </div>
+      <div class="edu__grid">
+
+        <div class="edu__col">
+          <h3 class="edu__col-title">&#127891; Formação Acadêmica</h3>
+
+          <div class="edu-card reveal">
+            <span class="edu-card__icon">&#129302;</span>
+            <div class="edu-card__body">
+              <h4>Pós-Graduação em IA e Machine Learning</h4>
+              <span class="edu-card__inst">UNIPÊ</span>
+              <span class="edu-card__year">Cursando</span>
+              <span class="badge badge--active">Em andamento</span>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <span class="edu-card__icon">&#128187;</span>
+            <div class="edu-card__body">
+              <h4>Tecnólogo em Sistemas para Internet</h4>
+              <span class="edu-card__inst">UNIPÊ</span>
+              <span class="edu-card__year">2024</span>
+              <span class="badge badge--done">Concluído</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu__col">
+          <h3 class="edu__col-title">&#127942; Certificações</h3>
+
+          <div class="cert-card reveal">
+            <span class="cert-card__icon">&#129504;</span>
+            <div>
+              <h4>Ciência de Dados e IA Generativa com Python</h4>
+              <span class="cert-card__org">SECTRAS</span>
+              <p>ML &middot; Visão Computacional &middot; PLN &middot; IA Generativa &middot; RAG &middot; Fine Tuning</p>
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <span class="cert-card__icon">&#127981;</span>
+            <div>
+              <h4>Certificados de Proficiência &mdash; Fábrica de Software</h4>
+              <span class="cert-card__org">UNIPÊ</span>
+              <p>2024.2 e 2025.2</p>
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <span class="cert-card__icon">&#127891;</span>
+            <div>
+              <h4>Diploma de Tecnólogo em Sistemas para Internet</h4>
+              <span class="cert-card__org">UNIPÊ</span>
+              <p>2024</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">&#47;&#47; contato</span>
+        <h2 class="section__title">Vamos Conversar?</h2>
+        <p class="section__subtitle">
+          Estou aberto a novas oportunidades, projetos freelance e colaborações.
+        </p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact-item">
+            <span class="contact-item__icon">&#128139;</span>
+            <div>
+              <h4>E-mail</h4>
+              <a href="mailto:thiagolyra1@gmail.com">thiagolyra1@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__icon">&#128222;</span>
+            <div>
+              <h4>Telefone</h4>
+              <a href="tel:+5583988881417">(83) 98888-1417</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__icon">&#128205;</span>
+            <div>
+              <h4>Localização</h4>
+              <span>João Pessoa, PB &mdash; Brasil</span>
+            </div>
+          </div>
+          <div class="contact__links">
+            <a href="https://github.com/thiagolyra1" target="_blank" rel="noopener" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://gitlab.com/thiagolyra1" target="_blank" rel="noopener" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 014.82 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0118.6 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.51L23 13.45a.84.84 0 01-.35.94z"/></svg>
+              GitLab
+            </a>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar Mensagem &#8594;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#home" class="footer__logo">TL<span>.</span></a>
+        <p class="footer__copy">
+          Desenvolvido por <strong>Thiago de Lyra Borges</strong> &mdash; João Pessoa, PB
+        </p>
+        <nav class="footer__nav" aria-label="Links do rodapé">
+          <a href="https://github.com/thiagolyra1" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://gitlab.com/thiagolyra1" target="_blank" rel="noopener">GitLab</a>
+          <a href="mailto:thiagolyra1@gmail.com">E-mail</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
