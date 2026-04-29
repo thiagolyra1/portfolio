@@ -594,7 +594,18 @@ h4 { font-size: .95rem; font-weight: 600; color: var(--text); }
 .cert-card__icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
 .cert-card h4    { margin-bottom: .2rem; font-size: .875rem; }
 .cert-card__org  { display: block; font-size: .78rem; color: #a78bfa; font-weight: 600; margin-bottom: .2rem; }
-.cert-card p     { font-size: .78rem; color: var(--text-3); margin: 0; }
+.cert-card p     { font-size: .78rem; color: var(--text-3); margin: 0 0 .35rem; }
+.cert-card__link,
+.edu-card__link {
+  display: inline-block;
+  margin-top: .4rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--cyan);
+  transition: opacity .2s;
+}
+.cert-card__link:hover,
+.edu-card__link:hover { opacity: .75; }
 
 /* ============================================================
    CONTACT
