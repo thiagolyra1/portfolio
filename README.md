@@ -1,14 +1,14 @@
 # Thiago Lyra — Portfólio
 
-**Desenvolvedor Full Stack** com experiência comprovada em projetos reais para órgãos governamentais brasileiros. Especializado em Python/Django, TypeScript/Angular e Java/Spring — com foco em sistemas escaláveis, APIs robustas e interfaces modernas.
+**Desenvolvedor Full Stack** com foco em soluções orientadas por IA. APIs robustas em Python/Django REST, interfaces modernas em Next.js/React e integração de LLMs, automações n8n e servidores MCP a sistemas reais em produção.
 
-🌐 **[Ver portfólio ao vivo →](https://thiagolyra1.github.io/portfolio)**
+🌐 **[Ver portfólio ao vivo →](https://thiagolyra-dev.vercel.app/)**
 
 ---
 
 ## Sobre mim
 
-Formado em **Tecnologia em Sistemas para Internet** pela UNIPÊ e atualmente cursando pós-graduação em **IA e Machine Learning**. Atuei como estagiário em duas organizações: na **Fábrica de Software UNIPÊ** (desenvolvimento full stack para clientes governamentais) e no **TRE-PB** (desenvolvimento web institucional). Inglês avançado.
+Formado em **Tecnologia em Sistemas para Internet** pela UNIPÊ e atualmente cursando pós-graduação em **IA e Machine Learning**. Hoje atuo na **Tely Telecom** com desenvolvimento full stack — backend Python/Django REST, frontend Next.js/React, automações n8n e integração de LLMs (OpenAI/Anthropic) via servidores MCP. Antes, fui estagiário na **Fábrica de Software UNIPÊ** (full stack para clientes governamentais) e no **TRE-PB** (web institucional). Inglês avançado.
 
 ---
 
@@ -16,23 +16,25 @@ Formado em **Tecnologia em Sistemas para Internet** pela UNIPÊ e atualmente cur
 
 | Projeto | Stack | Cliente |
 |---------|-------|---------|
+| **Sistema Comercial** — plataforma de vendas orientada por IA, com automações n8n e servidores MCP conectando LLMs a APIs, bancos e sistemas internos | Next.js · React · TypeScript · Django REST · n8n · MCP · LLMs · Docker · PostgreSQL | Tely Telecom |
 | **Clipping de Notícias** — scraping automatizado com agendamento a cada 15 min, coleta de sites e Instagram | Python · Django · Celery · Redis · PostgreSQL · Docker · Playwright | Polícia Militar da PB |
 | **ESP-PB** — sistema completo de gestão da Rede Escola SUS-PB: estágios, residências, documentos, dashboards | Django · DRF · Next.js · React · TypeScript · PostgreSQL · Docker | Escola de Saúde Pública – Estado da PB |
 | **Sistema Financeiro** — gestão financeira com pipeline de NLP (PTT5 fine-tuned) para extração de dados de PDFs não-padronizados | Django · PostgreSQL · Transformers · Hugging Face · Docker | Exército Brasileiro |
 
-> Todos os três projetos estão em produção e foram desenvolvidos na Fábrica de Software UNIPÊ.
+> Todos os projetos estão em produção. O Sistema Comercial foi desenvolvido na Tely Telecom; os demais, na Fábrica de Software UNIPÊ.
 
 ---
 
 ## Stack tecnológico
 
 ```
-Linguagens   Python · Java · TypeScript · JavaScript
-Backend      Django · DRF · Spring · REST APIs
-Frontend     React · Next.js · Angular
-Banco        PostgreSQL · MySQL · MongoDB · Redis
-Infra        Docker · Celery · Git · Playwright · Selenium
-IA / Dados   Machine Learning · NLP · RAG · IA Generativa · Hugging Face
+Linguagens     Python · TypeScript · JavaScript · Java
+Backend        Django · DRF · REST APIs · Spring
+Frontend       Next.js · React · Angular
+Banco          PostgreSQL · MySQL · MongoDB · Redis
+Infra          Docker · CI/CD · GitHub Actions · Celery · Git
+IA aplicada    LLMs · MCP (Model Context Protocol) · n8n · Claude Code · OpenAI/Anthropic API
+IA / Dados     Machine Learning · NLP · RAG · IA Generativa · Fine-tuning · Hugging Face
 ```
 
 ---
