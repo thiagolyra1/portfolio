@@ -42,9 +42,9 @@ document.addEventListener('keydown', e => {
 const lines = [
   'Full Stack Developer',
   'Python / Django Dev',
-  'TypeScript Enthusiast',
-  'Angular & React Dev',
-  'Java / Spring Dev',
+  'Next.js & React Dev',
+  'LLM & MCP Integrations',
+  'n8n Automations',
   'IA & ML Student'
 ];
 
